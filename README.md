@@ -4,10 +4,10 @@
 ### Julio, 2025 
 
 ## Andrés Peña M.
-[agpena@colmex.mx](mailto:andres.pena.montalvo@ciencias.unam.mx)
+[andres.pena.montalvo@ciencias.unam.mx](mailto:andres.pena.montalvo@ciencias.unam.mx)
 
 ## Estructura
-* `bases` : datos de entrada
+* `data` : datos de entrada
 * `onenote` : apuntes de clase
 * `script` : código para replicar el análisis y las visualizaciones
 * `slides` : presentaciones del curso
