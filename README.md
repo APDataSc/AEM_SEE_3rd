@@ -13,8 +13,8 @@
 * `slides` : presentaciones del curso
 
 
-#### Bibliografía:
-[Bibliografía clásica](https://drive.google.com/drive/folders/1nKK4FFTld8COBd3Pb7KicU_AguFwDNyu)
+#### Google drive:
+[Drive](https://drive.google.com/drive/folders/1nKK4FFTld8COBd3Pb7KicU_AguFwDNyu)
 
 #### Evaluaciones:
 * [Evaluación 1](https://forms.gle/AMHAjiAU6VkeQBAA9), 40%
