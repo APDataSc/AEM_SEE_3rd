@@ -6,15 +6,21 @@ rm(list = ls())
 # install.packages("dplyr", dependencies = T)
 # install.packages("survey", dependencies = T)
 # install.packages("calidad", dependencies = T)
+install.packages("rio", dependencies = T)
+install.packages("foreign", dependencies = TRUE)
 
 # 3) Cargar paquetería
 library(dplyr)
 library(survey)
 library(calidad)
+library(rio)
+library(foreign)
+
 
 # 3.1) Observar las funciones de un paquete
 ls("package:calidad")
 ls("package:survey")
+ls("package:rio")
 
 # 4) Determinar el directorio de trabajo 
 setwd("C:/Users/LENOVO/Desktop/SEE_2025/AEM_SEE_3rd/data")
@@ -61,5 +67,18 @@ fac <- factor(vec, levels = 1:2, labels = c("Hombre", "Mujer"))
 
 table(fac)
 prop.table(table(fac))
+
+
+
+# Manejo de data.frames en R
+data <- read.spss("10 ENIGHUR11_HOGARES_AGREGADOS.SAV",
+                  to.data.frame = T, use.value.labels = F
+                  )
+
+
+
+
+
+
 
 
