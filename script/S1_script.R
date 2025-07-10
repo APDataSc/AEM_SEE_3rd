@@ -106,11 +106,27 @@ tab1 <- data %>%
 data <- data %>% 
              mutate(ing_per = ing_cor_tot/numpers,
                     pobre = ifelse(ing_per<80, 1, 0))
-  
-  
+
+tab2 <- data %>% 
+             group_by(Provincia) %>% 
+             summarise(pobreza = mean(pobre)) %>% 
+             arrange(desc(pobreza))
+
+# Con factor de expansión
+w_mean <- function(x_i, w_i){
+  w_mean <- sum(x_i*w_i)/sum(w_i)
+  return(w_mean)
+}
+
+x <- 1:5
+w <- rep(0.2, 5) 
+w_mean(x, w)
 
 
+tab3 <- data %>% 
+             group_by(Provincia) %>% 
+             summarise(media_ing_fexp = w_mean(ing_cor_tot, Fexp_cen2010)) %>% 
+             arrange(desc(media_ing_fexp))
 
-
-
-
+# Unión de dos tablas
+tab4 <- left_join(tab1, tab3, "Provincia") 
