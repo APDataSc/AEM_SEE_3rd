@@ -16,11 +16,16 @@ library(calidad)
 ls("package:calidad")
 ls("package:survey")
 
-# 4) Cargar las tablas de datos
+# 4) Determinar el directorio de trabajo 
+setwd("C:/Users/LENOVO/Desktop/SEE_2025/AEM_SEE_3rd/data")
+getwd()
+dir()
+
+# 5) Cargar las tablas de datos
 data <- epf_personas
 data1 <- casen 
 
-# 5) Análisis
+# 6) Análisis
 names(data)
 sum(data$fe)
 sum(data1$expr)
@@ -47,3 +52,14 @@ summary(dm)
 
 svymean(design = dm, x = ~ocupado)
 svymean(design = dm, x = ~gastot_hd)
+
+
+# Factores en R
+
+vec <- c(1, 2, 2, 1, 2, 1, 2)
+fac <- factor(vec, levels = 1:2, labels = c("Hombre", "Mujer"))
+
+table(fac)
+prop.table(table(fac))
+
+
