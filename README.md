@@ -17,5 +17,5 @@
 [Drive](https://drive.google.com/drive/folders/1nKK4FFTld8COBd3Pb7KicU_AguFwDNyu)
 
 #### Evaluaciones:
-* [Evaluación 1](https://forms.gle/AMHAjiAU6VkeQBAA9), 40%
-* [Evaluación 2](https://forms.gle/cquKW5Hp294LLvxc7), 60%
+* [Evaluación 1](https://forms.gle/FcXX3aosyegPbLXK9), 40%
+* [Evaluación 2](), 60%
