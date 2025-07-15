@@ -130,3 +130,63 @@ tab3 <- data %>%
 
 # Unión de dos tablas
 tab4 <- left_join(tab1, tab3, "Provincia") 
+
+
+# Distribuciones de los estimadores
+#Permutaciones y combinaciones
+install.packages("gtools", dependencies = TRUE)
+library(gtools)
+
+#CR
+(x<-1:4)
+4^2
+
+permutations(n=4,r=2,v=x,repeats.allowed=T)
+
+choose(4,2) #Duplas posibles sin repetición
+
+combinations(4, 2, v=x)
+
+
+# Ejemplo de distribución de la media muestral CR
+x<-1:4
+n<-length(x)
+(mu<-mean(x))
+
+(va<-sum((x-mu)^2)/n)
+
+muestras<-permutations(n=4,r=2,v=x,repeats.allowed=T)
+(xbar_n_i<-rowMeans(muestras))
+
+(fx_i<-prop.table(table(xbar_n_i)))
+
+barplot(prop.table(table(xbar_n_i)))
+
+xbar_i<-unique(xbar_n_i)
+(esp_xbar<-sum(xbar_i*fx_i))
+(var_xbar<-sum((xbar_i-esp_xbar)^2*fx_i))
+
+
+
+#Teorema del límite central
+N <- rbinom(1000, 100, 0.01)
+#N <- rexp(1000, 1/10)
+#N <- runif(1000, 10, 50)
+
+n <- numeric(100)
+
+for (i in 1:500) {
+  n[i] <- mean(sample(N, 100, replace = TRUE))
+}
+
+par(mfrow=c(1,2))
+hist(N, probability = T)
+hist(n, probability = T)
+curve(dnorm(x, mean(n), sd(n)), col = 2, lty = 2,
+      lwd = 2, add=T)
+par(mfrow=c(1,1))
+
+
+
+
+
