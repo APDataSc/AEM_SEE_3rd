@@ -3,7 +3,7 @@
 #
 #                          Análisis de encuestas por muestreo
 #                                        2025
-#                         Sociedad Ecuatoriana de Estaadística
+#                         Sociedad Ecuatoriana de Estadística
 #                                       M.A.S.
 #
 #         Fecha de creación:        05/10/2020

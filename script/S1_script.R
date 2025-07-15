@@ -1,3 +1,18 @@
+#**************************************************************************************#
+#**************************************************************************************#
+#
+#                          Análisis de encuestas por muestreo
+#                                        2025
+#                         Sociedad Ecuatoriana de Estadística
+#                                       Intro
+#
+#         Fecha de creación:        07/07/2025
+#         Actualizado por:          Andrés Peña M.
+#         Fecha de actualización:   10/07/2025
+#         Contacto:                 andres.pena.montalvo@ciencias.unam.mx
+#
+#**************************************************************************************#
+#**************************************************************************************#
 
 # 1) Remover objetos
 rm(list = ls())
@@ -185,8 +200,3 @@ hist(n, probability = T)
 curve(dnorm(x, mean(n), sd(n)), col = 2, lty = 2,
       lwd = 2, add=T)
 par(mfrow=c(1,1))
-
-
-
-
-
