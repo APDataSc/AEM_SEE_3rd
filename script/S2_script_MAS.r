@@ -14,7 +14,7 @@
 #**************************************************************************************#
 #**************************************************************************************#
 
-
+qnorm(0.975)
 # Muestreo Aleatorio Simple
 rm(list = ls())
 # Ejemplo de educacion:
@@ -24,9 +24,9 @@ rm(list = ls())
 # calificaciones, el total de ingresos y la proporcion de alumnos 
 # que trabajan.
 
-setwd("") #carpeta de trabajo
+setwd("C:/Users/LENOVO/Desktop/SEE_2025/AEM_SEE_3rd/data") #carpeta de trabajo
 
-datos <- read.csv("educacion.txt") #lectura de datos
+datos <- read.csv("educacion.txt") #lectura de datos, marco muestral
 names(datos)
 dim(datos)
 
@@ -58,7 +58,7 @@ nn1/N
 s2.ing <- var(muestrap$ingresos)
 # tamaño de muestra para estimar el total
 # de ingresos con una precision de +-5,000,000
-n2 <- s2.ing*1.96^2*N^2/5000000^2
+n2 <- qnorm(0.975)^2*N^2*s2.ing/5000000^2
 nn2 <- n2/(1+n2/N)
 # proporcion que representa la muestra
 # de la poblacion
@@ -69,7 +69,7 @@ nn2/N
 # de estudiantes que trabajan con una
 # precision de +-0.03
 ppiloto <- mean(muestrap$trabaja)
-n3 <- 1.96^2 *ppiloto*(1-ppiloto)/0.03^2
+n3 <- qnorm(0.975)^2*ppiloto*(1-ppiloto)/0.03^2
 nn3 <- n3/(1+n3/N)
 # proporcion que representa la muestra
 # de la poblacion
