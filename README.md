@@ -17,5 +17,6 @@
 [Drive](https://drive.google.com/drive/folders/1nKK4FFTld8COBd3Pb7KicU_AguFwDNyu)
 
 #### Evaluaciones:
+Constituyen parte de las 20 horas de *trabajo autónomo* para acreditar el curso.
 * [Evaluación 1](https://forms.gle/FcXX3aosyegPbLXK9), 40%
 * [Evaluación 2](), 60%
