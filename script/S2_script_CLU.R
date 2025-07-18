@@ -49,7 +49,7 @@ todos <- cbind(pob,municipio) #incluyo municipio en la base de datos
 
 n <- 167 #numero de conglomerados en muestra
 
-d <- cluster(todos,clustername=c("municipio"),size=n,method="srswor")
+d <- sampling::cluster(todos,clustername=c("municipio"),size=n,method="srswor")
 
 head(d)
 
